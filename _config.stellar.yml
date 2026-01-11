@@ -1,0 +1,101 @@
+# Stellar Theme Configuration
+# Reference: _config.stellar.official.yml
+
+# 1. 站点 Logo 与 修复报错的关键路径
+logo:
+  icon: https://cdn.jsdelivr.net/gh/Jaylin03/blog-images@master/logo_ln3_bull_v8.png
+  title: Jaylin's Base
+  subtitle: 'Deepen Cross-border, Drive Growth'
+
+style:
+  # 必须配置 favicon 路径，否则主题脚本在处理 json_ld 时会因 null 报错
+  favicon: https://cdn.jsdelivr.net/gh/Jaylin03/blog-images@master/logo_ln3_bull_v8.png
+  text-align: justify
+  font-size:
+    body: 1rem
+
+# 2. 导航栏 (按照官方菜单项结构)
+menubar:
+  items: 
+    - id: post
+      theme: '#1BCDFC'
+      icon: solar:documents-bold-duotone
+      title: Blog
+      url: /
+    - id: projects
+      theme: '#3DC550'
+      icon: solar:notebook-bookmark-bold-duotone
+      title: Projects
+      url: /wiki/
+    - id: explore
+      theme: '#FA6400'
+      icon: solar:planet-bold-duotone
+      title: Explore
+      url: /explore/
+    - id: social
+      theme: '#F44336'
+      icon: solar:chat-square-like-bold-duotone
+      title: Social
+      url: /links/
+
+# 3. 社交链接 (Sidebar Widget)
+social:
+  - icon: fab fa-github
+    url: https://github.com/jaylin03
+    title: Github
+    color: '#000000'
+  - icon: fas fa-envelope
+    url: mailto:jaylon03.lee@gmail.com
+    title: Email
+    color: '#0078D7'
+  - icon: fab fa-telegram
+    url: https://t.me/your_telegram_username
+    title: Telegram
+    color: '#0088cc'
+
+# 4. 头像与默认图片
+article:
+  avatar: https://cdn.jsdelivr.net/gh/Jaylin03/blog-images@master/logo_ln3_bull_v8.png
+  share: [wechat, weibo, email, link]
+
+default_top_img: https://cdn.jsdelivr.net/gh/Jaylin03/blog-images@master/home-design-5.jpg
+index_img: https://cdn.jsdelivr.net/gh/Jaylin03/blog-images@master/home-design-5.jpg
+
+# 5. 布局树与 Wiki
+site_tree:
+  home:
+    sidebar: starter, welcome, recent
+  index_blog:
+    sidebar: starter, welcome, recent
+  index_wiki:
+    menu_id: projects
+    nav_tabs:
+      All: /wiki/
+      Facebook: /wiki/tags/Facebook/
+      Tiktok: /wiki/tags/Tiktok/
+  wiki:
+    menu_id: projects
+
+wiki:
+  tree:
+    'Projects':
+      - facebook
+      - tiktok
+      - alibaba
+      - shopify
+    'Strategy':
+      - okr
+
+# 6. Twikoo 评论系统
+comments:
+  service: twikoo
+  twikoo:
+    envId: https://twikoo-new-kappa.vercel.app
+    region: 
+    visitor: true
+    js: https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js
+
+# 7. 搜索
+search:
+  enable: true
+  service: local_search

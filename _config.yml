@@ -1,0 +1,48 @@
+# Hexo Configuration
+# Site Info
+title: Jaylin's E-commerce Base
+subtitle: 'Deepen Cross-border, Drive Growth'
+description: "Jaylin's Cross-Border E-Commerce Operations Knowledge Base."
+keywords: 'Cross-border, FB Ads, Google Ads'
+author: Jaylin
+language: en
+timezone: 'America/Los_Angeles'
+
+# URL
+url: https://Jaylin03.github.io/blog_en
+root: /blog_en/
+permalink: en/posts/:title/
+pretty_urls:
+  trailing_index: true
+  trailing_html: true
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+skip_render:
+  - assets/*
+
+# Writing
+new_post_name: :title.md
+default_layout: post
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+
+# Extensions
+# 必须与 themes 下的文件夹名称一致 (小写)
+theme: stellar
+
+# Deployment
+deploy:
+  type: git
+  repo: git@github.com:jaylin03/blog_en.git
+  branch: main
